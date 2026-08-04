@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.3.2 (2026-08-04)
+------------------
+
+- Republished as `devpi-semantic-ui-ng`, a maintained fork of `devpi-semantic-ui` (unreleased since 0.2.2 in 2017). The import package and the `--theme semantic-ui` option are unchanged
+- Fix `KeyError` on tox results that carry no `failed` key ([#11](https://github.com/apihackers/devpi-semantic-ui/pull/11), thanks con-f-use)
+- Take the live search URL from the search form's action instead of a hardcoded `/+search`, so the dropdown works when devpi is served under a URL prefix ([#8](https://github.com/apihackers/devpi-semantic-ui/pull/8), thanks tobyX)
+
 0.3.1 (2026-08-04)
 ------------------
 

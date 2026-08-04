@@ -25,16 +25,20 @@ exec(compile(
 ))
 
 setup(
-    name="devpi-semantic-ui",
+    name="devpi-semantic-ui-ng",
     description=__description__,
-    url="https://github.com/apihackers/devpi-semantic-ui",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url="https://github.com/rmawatson/devpi-semantic-ui",
     version=__version__,
-    maintainer="API Hackers",
-    maintainer_email="github@apihackers.com",
+    author="API Hackers",
+    author_email="github@apihackers.com",
+    maintainer="rmawatson",
+    maintainer_email="rmawatson@hotmail.com",
     license="MIT",
     entry_points={
         'devpi_server': [
-            "devpi-semantic-ui = devpi_semantic_ui"
+            "devpi-semantic-ui-ng = devpi_semantic_ui"
         ]
     },
     install_requires=['devpi-web'],
