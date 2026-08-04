@@ -38,6 +38,7 @@ setup(
         ]
     },
     install_requires=['devpi-web'],
+    python_requires='>=3.9',
     include_package_data=True,
     zip_safe=False,
     packages=['devpi_semantic_ui'],
@@ -51,9 +52,7 @@ setup(
         'Topic :: System :: Software Distribution',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3 :: Only',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',
     ],

@@ -3,9 +3,9 @@
         <div class="ui cards">
             <div class="ui card" tal:repeat="user users">
                 <div class="content">
-                    <div class="header">${user.user_name}</div>
-                    <div class="meta" tal:condition="user.user_title">${user.user_title}<</div>
-                    <div class="description" tal:condition="user.user_description">${user.user_description}<</div>
+                    <div class="header"><a href="${user.user_url}">${user.user_name}</a></div>
+                    <div class="meta" tal:condition="user.user_title">${user.user_title}</div>
+                    <div class="description" tal:condition="user.user_description">${user.user_description}</div>
                 </div>
                 <div class="content" tal:condition="user.indexes">
                     <div class="description">
