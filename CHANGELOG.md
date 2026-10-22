@@ -1,6 +1,18 @@
 Changelog
 =========
 
+0.3.3 (2026-10-22)
+------------------
+
+- Mark the theme's devpi-server hooks with devpi-server's pluggy `HookimplMarker`: pluggy registers only marked hooks, so they were never called
+- `--theme semantic-ui` now works: it was taken as a path, and devpi-server exited (passing the package's directory as `--theme` worked)
+- The search box shows live results: the JSON search view they come from was never added, so the box showed nothing until a search was submitted
+- The JSON search view is added after devpi-web's search page, and takes only requests with a JSON `Content-Type`, so a browser's request for `/+search` always gets the page
+- The JSON search view is now added whenever the package is installed, with or without `--theme`
+- The JSON search returns its query as a string, and the "View all" link URL-encodes it
+- Declare `pluggy`, which the package now imports
+- Read the README and the changelog as UTF-8 when building, whatever the build machine's locale
+
 0.3.2 (2026-08-04)
 ------------------
 

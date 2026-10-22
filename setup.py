@@ -8,7 +8,7 @@ def _md(filename):
      - code-block directive
      - all badges
     '''
-    content = open(filename).read()
+    content = open(filename, encoding='utf-8').read()
     return content
 
 
@@ -19,7 +19,7 @@ long_description = '\n'.join((
 ))
 
 exec(compile(
-    open('devpi_semantic_ui/__about__.py').read(),
+    open('devpi_semantic_ui/__about__.py', encoding='utf-8').read(),
     'devpi_semantic_ui/__about__.py',
     'exec'
 ))
@@ -41,7 +41,7 @@ setup(
             "devpi-semantic-ui-ng = devpi_semantic_ui"
         ]
     },
-    install_requires=['devpi-web'],
+    install_requires=['devpi-web', 'pluggy'],
     python_requires='>=3.9',
     include_package_data=True,
     zip_safe=False,
