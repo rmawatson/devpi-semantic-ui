@@ -20,7 +20,7 @@ def emptyresult():
 def search(request):
     search_view = SearchView(request)
     result = search_view.result or emptyresult()
-    result['query'] = search_view.params['query'],
+    result['query'] = search_view.params['query']
     # transform frozenset into list
     for item in result['items']:
         clean_item(item)

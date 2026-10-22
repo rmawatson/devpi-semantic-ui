@@ -41,7 +41,7 @@ $(function() {
 
                 if (devpiResponse.result.info.pagecount > 1) {
                     response.action = {
-                        url: searchURL + '?query=' + devpiResponse.result.query,
+                        url: searchURL + '?query=' + encodeURIComponent(devpiResponse.result.query),
                         "text": 'View all '+ devpiResponse.result.info.total +' results'
                     };
                 }
